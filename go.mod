@@ -1,4 +1,4 @@
-module github.com/alienvspredator/testtype
+module github.com/alienvspredator/postgres-binary-tester
 
 go 1.14
 
