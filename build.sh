@@ -10,7 +10,7 @@ while getopts 'ht:' flag; do
 	case "${flag}" in
 	h)
 		print_usage
-		exit 1
+		exit 0
 		;;
 	t) tag="${OPTARG}" ;;
 	?)
