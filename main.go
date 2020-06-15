@@ -128,6 +128,16 @@ func main() {
 
 			scanned = dst
 
+		case pgtype.TextOID:
+			typeName = "text"
+			var dst string
+			if err := ci.Scan(oid, pgtype.BinaryFormatCode, rawVal, &dst); err != nil {
+				fmt.Println(err)
+				os.Exit(1)
+			}
+
+			scanned = dst
+
 		default:
 			typeName = "Unsupported"
 			scanned = "Unsupported"
